@@ -8,16 +8,17 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.runtracking.base.BaseFragment
 import com.example.runtracking.databinding.FragmentStatisticsBinding
-import com.example.runtracking.ui.viewModels.StatisticsViewModel
+import com.example.runtracking.databinding.FragmentTrackingBinding
+import com.example.runtracking.ui.viewModels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class StatisticsFragment : BaseFragment<FragmentStatisticsBinding>(){
+class TrackingFragment : BaseFragment<FragmentTrackingBinding>(){
 
-    private val viewModel : StatisticsViewModel by viewModels()
+    private val viewModel : MainViewModel by viewModels()
 
-    override fun getViewBinding(): FragmentStatisticsBinding {
-        return FragmentStatisticsBinding.inflate(layoutInflater)
+    override fun getViewBinding(): FragmentTrackingBinding {
+        return FragmentTrackingBinding.inflate(layoutInflater)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
