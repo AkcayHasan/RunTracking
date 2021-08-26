@@ -41,6 +41,7 @@ class TrackingFragment : BaseFragment<FragmentTrackingBinding>(){
     private fun actions(){
         binding.btnToggleRun.setOnClickListener {
             sendCommandToService(ACTION_START_OR_RESUME_SERVICE)
+            binding.btnFinishRun.visibility = View.VISIBLE
         }
     }
 
